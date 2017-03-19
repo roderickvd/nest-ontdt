@@ -2,8 +2,22 @@ nest-ontdt
 ==========
 With your Nest thermostat, On This Do That.
 
-Currently enables a switch for the electric floor heating system
-when the Nest is actively heating.
+This is Node.js console script uses the Firebase API to subscribe to state changes of your Nest Thermostat. Currently, it toggles a WeMo Switch for the electric floor heating system depending on whether the Nest is heating or off, but you can make it do anything you want.
 
-Run "npm install" to set-up the Nest access token.
-This requires a Nest API key to be configured in config.json.
+Setup
+-----
+
+1. Copy `config.sample.json` to `config.json`.
+2. Edit `config.json` and fill out your Nest API keys. Get your Nest Product ID and secret here: https://developers.nest.com/products.
+3. Run `npm install` to authorize the script with Nest.
+4. Run nest-ontdt using `node index.js start`.
+
+I recommend running nest-ontdt from something like `monit` or `upstart` to respawn it whenever necessary. I run nest-ontdt on my Synology NAS using the following upstart configuration file:
+```
+start on runlevel [2345]
+stop on runlevel [06]
+setuid YOUR_USER
+respawn
+respawn limit 10 5
+exec /usr/local/bin/node /PATH/TO/nest-ontdt/index.js start
+```
