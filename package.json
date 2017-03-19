@@ -1,0 +1,26 @@
+{
+  "name": "@roderickvd/nest-ontdt",
+  "version": "1.0.0",
+  "description": "With your Nest thermostat, On This Do That.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "node scripts/authorize.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roderickvd/nest-ontdt.git"
+  },
+  "author": "Roderick van Domburg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/roderickvd/nest-ontdt/issues"
+  },
+  "homepage": "https://github.com/roderickvd/nest-ontdt#readme",
+  "dependencies": {
+    "daemon-control": "^0.1.4",
+    "querystring": "^0.2.0",
+    "readline-sync": "^1.4.5",
+    "wemo-client": "^0.11.2"
+  }
+}
