@@ -2,6 +2,9 @@ nest-ontdt
 ==========
 With your Nest thermostat, On This Do That.
 
+> [!WARNING]
+> This project is no longer under development and archived.
+
 This is Node.js console script uses the Firebase API to subscribe to state changes of your [Nest Thermostat](https://nest.com/thermostat/). Currently, it toggles a [ [WeMo Switch](http://www.belkin.com/us/F7C027-Belkin/p/P-F7C027/) for the electric floor heating system depending on whether the Nest is heating or off, but you can make it do anything you want.
 
 Setup
